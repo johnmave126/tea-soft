@@ -1,12 +1,8 @@
 # tea-soft
 
-[![crate][crate-image]][crate-link]
-[![Docs][docs-image]][docs-link]
-![Apache2/MIT licensed][license-image]
-![Rust Version][rustc-image]
-[![Build Status][build-image]][build-link]
-
-[Documentation][docs-link]
+[![crates.io](https://img.shields.io/crates/v/tea-soft.svg)](https://crates.io/crates/tea-soft)
+[![Documentation](https://docs.rs/tea-soft/badge.svg)](https://docs.rs/tea-soft)
+[![build](https://github.com/johnmave126/tea-soft/workflows/tea/badge.svg?branch=master&event=push)](https://github.com/johnmave126/tea-soft/actions?query=workflow:tea+branch:master)
 
 Rust implementation of TEA cipher
 
