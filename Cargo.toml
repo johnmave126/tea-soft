@@ -12,6 +12,7 @@ categories = ["cryptography", "no-std"]
 readme = "README.md"
 exclude = [
     ".github/**",
+    ".gitignore",
 ]
 
 
