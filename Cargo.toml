@@ -1,0 +1,22 @@
+[package]
+name = "tea-soft"
+version = "0.1.0"
+authors = ["Youmu"]
+edition = "2018"
+description = "TEA block cipher"
+license = "MIT OR Apache-2.0"
+keywords = ["crypto", "tea", "block-cipher"]
+categories = ["cryptography", "no-std"]
+
+
+[dependencies.byteorder]
+default-features = false
+version = "1"
+
+[dependencies.block-cipher]
+version = "0.8"
+
+[dev-dependencies.block-cipher]
+features = ["dev"]
+version = "0.8"
+
