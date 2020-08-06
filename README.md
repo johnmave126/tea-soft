@@ -1,8 +1,9 @@
 # tea-soft
 
-[![crates.io](https://img.shields.io/crates/v/tea-soft.svg)](https://crates.io/crates/tea-soft)
-[![Documentation](https://docs.rs/tea-soft/badge.svg)](https://docs.rs/tea-soft)
-[![build](https://github.com/johnmave126/tea-soft/workflows/tea/badge.svg?branch=master&event=push)](https://github.com/johnmave126/tea-soft/actions?query=workflow:tea+branch:master)
+[![crate][crate-image]][crate-link]
+[![Docs][docs-image]][docs-link]
+![Apache2/MIT licensed][license-image]
+[![Build Status][build-image]][build-link]
 
 Rust implementation of TEA cipher
 
@@ -24,3 +25,13 @@ Licensed under either of:
  * [MIT license](http://opensource.org/licenses/MIT)
 
 at your option.
+
+[//]: # (badges)
+
+[crate-image]: https://img.shields.io/crates/v/tea-soft.svg
+[crate-link]: https://crates.io/crates/tea-soft
+[docs-image]: https://docs.rs/tea-soft/badge.svg
+[docs-link]: https://docs.rs/tea-soft/
+[license-image]: https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg
+[build-image]: https://github.com/johnmave126/tea-soft/workflows/tea/badge.svg?branch=master&event=push
+[build-link]: https://github.com/johnmave126/tea-soft/actions?query=workflow:tea+branch:master

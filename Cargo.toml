@@ -5,8 +5,11 @@ authors = ["Youmu"]
 edition = "2018"
 description = "TEA block cipher"
 license = "MIT OR Apache-2.0"
+documentation = "https://docs.rs/tea-soft"
+repository = "https://github.com/johnmave126/tea-soft"
 keywords = ["crypto", "tea", "block-cipher"]
 categories = ["cryptography", "no-std"]
+readme = "README.md"
 
 
 [dependencies.byteorder]
