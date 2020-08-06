@@ -10,6 +10,9 @@ repository = "https://github.com/johnmave126/tea-soft"
 keywords = ["crypto", "tea", "block-cipher"]
 categories = ["cryptography", "no-std"]
 readme = "README.md"
+exclude = [
+    ".github/**",
+]
 
 
 [dependencies.byteorder]
