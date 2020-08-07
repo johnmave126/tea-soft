@@ -28,6 +28,8 @@
 
 pub use block_cipher;
 
+mod dev;
 mod impls;
+mod simd;
 
 pub use crate::impls::{Tea16, Tea32, Tea64};

@@ -1,4 +1,3 @@
 #![feature(test)]
-use block_cipher::bench;
 
-bench!(tea_soft::Tea16, 16);
+tea_soft::bench!(tea_soft::Tea16, 16);
