@@ -1,6 +1,6 @@
 [package]
 name = "tea-soft"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Youmu"]
 edition = "2018"
 description = "TEA block cipher"
