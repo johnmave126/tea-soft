@@ -1,12 +1,12 @@
 pub use block_cipher::{BlockCipher, NewBlockCipher};
 use core::ops::{BitXor, Shl, Shr};
 
-use byteorder::{ByteOrder, BigEndian};
+use byteorder::{BigEndian, ByteOrder};
 
-use block_cipher::consts::{U4, U8, U16};
+use block_cipher::consts::{U16, U4, U8};
 use block_cipher::generic_array::GenericArray;
 
-use crate::simd::{WrapArithmetic, slice_block, unslice_block};
+use crate::simd::{slice_block, unslice_block, WrapArithmetic};
 
 const TEA_DELTA: u32 = 0x9E3779B9;
 
@@ -31,7 +31,7 @@ macro_rules! define_tea_impl {
             fn encrypt_core<T>(&self, x: T, y: T) -> (T, T)
             where T: Copy +
                      WrapArithmetic<T> + WrapArithmetic<u32> +
-                     BitXor<Output = T> + 
+                     BitXor<Output = T> +
                      Shl<usize, Output = T> + Shr<usize, Output = T> {
                 let mut sum: u32 = 0;
                 let (mut x, mut y) = (x, y);
@@ -59,7 +59,7 @@ macro_rules! define_tea_impl {
             fn decrypt_core<T>(&self, x: T, y: T) -> (T, T)
             where T: Copy +
                      WrapArithmetic<T> + WrapArithmetic<u32> +
-                     BitXor<Output = T> + 
+                     BitXor<Output = T> +
                      Shl<usize, Output = T> + Shr<usize, Output = T> {
                 let mut sum: u32 = TEA_DELTA << $shift;
                 let (mut x, mut y) = (x, y);

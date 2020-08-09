@@ -1,6 +1,6 @@
-use core::ops::{BitXor, Shl, Shr};
-use byteorder::{ByteOrder, BigEndian};
 use crate::impls::Block8x4;
+use byteorder::{BigEndian, ByteOrder};
+use core::ops::{BitXor, Shl, Shr};
 
 #[derive(Clone, Copy, PartialEq, Eq, Debug)]
 #[allow(non_camel_case_types)]
@@ -86,12 +86,7 @@ impl Shl<usize> for u32x4 {
 
     #[inline(always)]
     fn shl(self, rhs: usize) -> u32x4 {
-        u32x4(
-            self.0 << rhs,
-            self.1 << rhs,
-            self.2 << rhs,
-            self.3 << rhs,
-        )
+        u32x4(self.0 << rhs, self.1 << rhs, self.2 << rhs, self.3 << rhs)
     }
 }
 
@@ -100,25 +95,26 @@ impl Shr<usize> for u32x4 {
 
     #[inline(always)]
     fn shr(self, rhs: usize) -> u32x4 {
-        u32x4(
-            self.0 >> rhs,
-            self.1 >> rhs,
-            self.2 >> rhs,
-            self.3 >> rhs,
-        )
+        u32x4(self.0 >> rhs, self.1 >> rhs, self.2 >> rhs, self.3 >> rhs)
     }
 }
 
 #[inline(always)]
 pub fn slice_block(blocks: &mut Block8x4) -> (u32x4, u32x4) {
-    (u32x4(BigEndian::read_u32(&blocks[0][0..4]),
-           BigEndian::read_u32(&blocks[1][0..4]),
-           BigEndian::read_u32(&blocks[2][0..4]),
-           BigEndian::read_u32(&blocks[3][0..4])),
-     u32x4(BigEndian::read_u32(&blocks[0][4..8]),
-           BigEndian::read_u32(&blocks[1][4..8]),
-           BigEndian::read_u32(&blocks[2][4..8]),
-           BigEndian::read_u32(&blocks[3][4..8])))
+    (
+        u32x4(
+            BigEndian::read_u32(&blocks[0][0..4]),
+            BigEndian::read_u32(&blocks[1][0..4]),
+            BigEndian::read_u32(&blocks[2][0..4]),
+            BigEndian::read_u32(&blocks[3][0..4]),
+        ),
+        u32x4(
+            BigEndian::read_u32(&blocks[0][4..8]),
+            BigEndian::read_u32(&blocks[1][4..8]),
+            BigEndian::read_u32(&blocks[2][4..8]),
+            BigEndian::read_u32(&blocks[3][4..8]),
+        ),
+    )
 }
 
 #[inline(always)]

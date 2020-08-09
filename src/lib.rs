@@ -8,7 +8,7 @@
 //! use tea_soft::block_cipher::generic_array::GenericArray;
 //! use tea_soft::block_cipher::{BlockCipher, NewBlockCipher};
 //! use tea_soft::Tea32;
-//! 
+//!
 //! let key = GenericArray::from_slice(&[0u8; 16]);
 //! let mut block = GenericArray::clone_from_slice(&[0u8; 8]);
 //! // Initialize cipher
