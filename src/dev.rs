@@ -3,7 +3,7 @@
 #[cfg_attr(docsrs, doc(cfg(feature = "dev")))]
 macro_rules! bench {
     ($cipher:path, $key_len:expr) => {
-        block_cipher::bench!($cipher, $key_len);
+        cipher::block_cipher_bench!($cipher, $key_len);
 
         #[bench]
         pub fn encrypt_blocks(bh: &mut Bencher) {
