@@ -1,10 +1,10 @@
-pub use block_cipher::{BlockCipher, NewBlockCipher};
+pub use cipher::{BlockCipher, NewBlockCipher};
 use core::ops::{BitXor, Shl, Shr};
 
 use byteorder::{ByteOrder, BigEndian};
 
-use block_cipher::consts::{U4, U8, U16};
-use block_cipher::generic_array::GenericArray;
+use cipher::consts::{U4, U8, U16};
+use cipher::generic_array::GenericArray;
 
 use crate::simd::{WrapArithmetic, slice_block, unslice_block};
 
