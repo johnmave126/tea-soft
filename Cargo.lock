@@ -34,7 +34,7 @@ dependencies = [
 
 [[package]]
 name = "tea-soft"
-version = "0.2.0"
+version = "0.3.0"
 dependencies = [
  "byteorder",
  "cipher",
